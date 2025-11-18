@@ -23,17 +23,20 @@ Passionate Front end Developer with expertise in modern web technologies and blo
 ## 💼 Experience Highlights
 
 ### Full Stack Development
+
 - Built modern e-commerce platforms with advanced payment integration
 - Developed real-time applications using WebSocket technology
 - Created responsive web applications with optimal performance
 
 ### Web3 & Blockchain
+
 - Developed DeFi dashboards with real-time data visualization
 - Built NFT marketplaces with wallet integration
 - Created cryptocurrency wallet interfaces
 - Smart contract development with Solidity
 
 ### Contact & Collaboration
+
 - 📧 **Email**: [soyobipelumi@gmail.com](mailto:soyobipelumi@gmail.com)
 - 💬 **WhatsApp**: [Contact me](https://wa.link/h0bw5q)
 - 📱 **Telegram**: [@divcode4](https://t.me/divcode4)
@@ -41,44 +44,57 @@ Passionate Front end Developer with expertise in modern web technologies and blo
 ## 🏆 Featured Projects
 
 ### 1. DeFi Dashboard
+
 **Web3 Application** | [Live Demo](https://comingsoon) | [View Code](https://github.com/username/defi-dashboard)
+
 - Comprehensive dashboard for decentralized finance operations
 - Real-time data visualization using Chart.js
 - Built with React, TypeScript, and Ethers.js
 
 ### 2. NFT Marketplace
+
 **Web3 Platform** | [Live Demo](https://nft-marketplace.examplecomingsoon.com) | [View Code](https://github.com/username/nft-marketplace)
+
 - Full-featured NFT marketplace with wallet integration
 - Auction functionality and metadata management
 - Next.js, Solidity, Web3.js, and Tailwind CSS
 
 ### 3. E-commerce Platform
+
 **Full Stack Application** | [Live Demo](https://shopwithpappyjoe.com.ng) | [View Code](https://github.com/username/ecommerce)
+
 - Modern e-commerce platform with advanced filtering
 - Payment integration with Paystack
 - PHP, SQL, and custom backend architecture
 
 ### 4. Task Management App
-**Collaboration Tool** | [Live Demo](https://taskmanager.example.com) | [View Code](https://github.com/username/taskmanager)
+
+**Collaboration Tool** | [Live Demo](https://taskmanager.soon.com) | [View Code](https://github.com/username/taskmanager)
+
 - Real-time collaborative task management
 - WebSocket integration for live updates
 - Vue.js, Express, Socket.io, PostgreSQL
 
 ### 5. Crypto Wallet Interface
+
 **Web3 Application** | [Live Demo](https://crypto-wallet.example.com) | [View Code](https://github.com/username/crypto-wallet)
+
 - User-friendly cryptocurrency wallet interface
 - MetaMask integration and transaction management
 - React, MetaMask, Web3.js, Material-UI
 
-### 6. Portfolio Website
-**Personal Brand** | [Live Demo](https://portfolio.example.com) | [View Code](https://github.com/username/portfolio)
-- Responsive portfolio with dark mode support
-- Smooth animations and modern UI
-- React, Tailwind CSS, Framer Motion, Vite
+### 6. Lovento Dating Website
+
+**Full Stack Application** | [Live Demo](https://loventodate.com) | [View Code](https://github.com/divcode-web)
+
+- Responsive dating platform with real-time features
+- WebSocket integration for live messaging
+- Next.js, Tailwind CSS, PostgreSQL, Socket.io, Supabase
 
 ## 🛠️ Technical Skills
 
 ### Frontend Development
+
 - **React.js** & **Next.js** - Component-based architecture
 - **TypeScript** - Type-safe development
 - **Vue.js** - Progressive framework
@@ -86,17 +102,20 @@ Passionate Front end Developer with expertise in modern web technologies and blo
 - **Framer Motion** - Advanced animations
 
 ### Backend Development
+
 - **Node.js** & **Express** - Server-side JavaScript
 - **PHP** - Server-side scripting
 - **RESTful APIs** - RESTful service design
 - **GraphQL** - Efficient data fetching
 
 ### Database & Storage
+
 - **PostgreSQL** - Relational database
 - **MySQL** - Database management
 - **SQL** - Database queries and optimization
 
 ### Web3 & Blockchain
+
 - **Solidity** - Smart contract development
 - **Ethers.js** - Ethereum library
 - **Web3.js** - Blockchain interaction
@@ -104,6 +123,7 @@ Passionate Front end Developer with expertise in modern web technologies and blo
 - **DeFi Protocols** - Decentralized finance
 
 ### Tools & Workflow
+
 - **Vite** - Build tool and dev server
 - **Git** - Version control
 - **Testing** - Quality assurance
@@ -136,7 +156,7 @@ Passionate Front end Developer with expertise in modern web technologies and blo
 
 **💡 "Code is like humor. When you have to explain it, it's bad." - Cory House**
 
-*Building the future, one commit at a time.*
+_Building the future, one commit at a time._
 
 [![Visitors](https://komarev.com/ghpvc/?username=divcode-web&style=flat-square)](https://github.com/divcode-web)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-November%202025-orange?style=flat-square)]()

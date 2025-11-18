@@ -304,8 +304,20 @@ export function Projects({ preview = false, onViewMore }: ProjectsProps) {
             style={{ transitionDelay: "400ms" }}
           >
             <button
-              onClick={onViewMore}
-              className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (onViewMore) {
+                  onViewMore();
+                } else {
+                  // Fallback: navigate to projects section
+                  const projectsSection = document.getElementById('projects');
+                  if (projectsSection) {
+                    projectsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }
+              }}
+              className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 cursor-pointer"
             >
               View More Projects
               <ArrowRight size={20} />
