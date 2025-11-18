@@ -1,4 +1,4 @@
-# 👨‍💻 John Soyobi - Full Stack Developer & Web3 Specialist
+# 👨‍💻 John Soyobi - Frontend Developer & Web3 Specialist
 
 <div align="center">
 
