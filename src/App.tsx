@@ -52,7 +52,7 @@ function App() {
         return (
           <>
             <Hero />
-            <Projects preview={true} />
+            <Projects preview={true} onViewMore={() => setActiveTab('projects')} />
             <Web3Expertise />
             <Testimonials />
             <Contact />

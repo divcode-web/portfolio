@@ -12,6 +12,16 @@ interface ProjectsProps {
 export function Projects({ preview = false, onViewMore }: ProjectsProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [imageLoadedStates, setImageLoadedStates] = useState<Record<string, boolean>>({});
+
+  // Handle image loading state
+  const handleImageLoad = (projectId: string) => {
+    setImageLoadedStates(prev => ({ ...prev, [projectId]: true }));
+  };
+
+  const handleImageError = (projectId: string) => {
+    setImageLoadedStates(prev => ({ ...prev, [projectId]: true }));
+  };
 
   // Scroll animations
   const { elementRef: headerRef, isVisible: headerVisible } =
@@ -105,10 +115,10 @@ export function Projects({ preview = false, onViewMore }: ProjectsProps) {
       title: "DeFi Dashboard",
       description:
         "A comprehensive dashboard for decentralized finance operations with real-time data visualization.",
-      image_url: "/images/3.png",
+      image_url: "/images/1.png",
       category: "Web3",
       technologies: ["React", "TypeScript", "Ethers.js", "Chart.js"],
-      live_url: "https://defi-dashboard.example.com",
+      live_url: "https://defi-dashboard.comingsoon.com",
       github_url: "https://github.com/divcode-web",
       order: 6,
       created_at: new Date().toISOString(),
@@ -204,7 +214,15 @@ export function Projects({ preview = false, onViewMore }: ProjectsProps) {
                     src={project.image_url}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                    onLoad={() => handleImageLoad(project.id)}
+                    onError={() => handleImageError(project.id)}
                   />
+                  {!imageLoadedStates[project.id] && (
+                    <div className="absolute inset-0 bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300"></div>
                 </div>
 

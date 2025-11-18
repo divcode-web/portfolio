@@ -53,7 +53,7 @@ const LoadingAnimation: React.FC<LoadingAnimationProps> = ({ onComplete }) => {
         </PyramidWrapper>
 
         {/* Carousel Loader */}
-        <CarouselWrapper>
+        <CarouselWrapper className="carousel-loader">
           <div className="loader">
             <div className="container">
               <div className="carousel">
@@ -290,66 +290,100 @@ const ModalOverlay = styled.div`
     .energy-ring {
       display: none; /* Hide energy rings on mobile */
     }
+
+    /* Hide carousel loader completely on mobile for performance */
+    .carousel-loader {
+      display: none !important;
+    }
+
+    /* Reduce pyramid size for tablet */
+    .pyramid-loader {
+      width: 250px !important;
+      height: 250px !important;
+    }
   }
 
   @media (max-width: 640px) {
-    /* Adjust pyramid loader size for mobile */
+    /* Further adjustments for mobile phones */
     .pyramid-loader {
-      width: 200px !important;
-      height: 200px !important;
+      width: 180px !important;
+      height: 180px !important;
     }
 
     .pyramid-loader .wrapper .side {
-      width: 50px !important;
-      height: 50px !important;
+      width: 40px !important;
+      height: 40px !important;
     }
 
-    /* Adjust carousel loader size for mobile */
+    /* Compact carousel loader for mobile */
     .loader {
-      width: 150px !important;
-      height: 45px !important;
+      width: 120px !important;
+      height: 35px !important;
+      gap: 0.5rem !important;
     }
 
     .container {
-      height: 150px !important;
+      height: 120px !important;
     }
 
     .love, .death, .robots {
-      width: 20px !important;
-      height: 20px !important;
+      width: 15px !important;
+      height: 15px !important;
     }
 
     .love::before, .love::after {
-      width: 20px !important;
-      height: 20px !important;
+      width: 15px !important;
+      height: 15px !important;
     }
 
     .love::before {
-      left: -12px !important;
+      left: -9px !important;
     }
 
     .love::after {
-      top: -12px !important;
+      top: -9px !important;
     }
 
     .death:after {
-      height: 45px !important;
-      border-left: 8px solid rgb(30, 184, 255) !important;
+      height: 35px !important;
+      border-left: 6px solid rgb(30, 184, 255) !important;
     }
 
     .death:before {
-      height: 42px !important;
-      border-left: 8px solid red !important;
+      height: 32px !important;
+      border-left: 6px solid red !important;
     }
 
     .robots {
-      height: 40px !important;
-      padding: 6px !important;
+      height: 30px !important;
+      padding: 4px !important;
     }
 
     .robots::after, .robots::before {
-      width: 8px !important;
-      height: 8px !important;
+      width: 6px !important;
+      height: 6px !important;
+    }
+  }
+
+  /* Extra small mobile devices */
+  @media (max-width: 480px) {
+    .pyramid-loader {
+      width: 150px !important;
+      height: 150px !important;
+    }
+
+    .loader {
+      width: 100px !important;
+      height: 30px !important;
+    }
+
+    .container {
+      height: 100px !important;
+    }
+
+    .love, .death, .robots {
+      width: 12px !important;
+      height: 12px !important;
     }
   }
 `;

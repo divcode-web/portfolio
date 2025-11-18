@@ -1,8 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Code2, Smartphone, Database, Zap, Shield, GitBranch, Award, GraduationCap } from 'lucide-react';
 
 export function About() {
   const [activeTab, setActiveTab] = useState('bio');
+  const [gifLoaded, setGifLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const frontendSkills = [
     { name: 'React', icon: Code2 },
@@ -105,11 +117,38 @@ export function About() {
 
             <div className="relative flex justify-center">
               <div className="w-64 h-64 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 flex items-center justify-center overflow-hidden">
-                <img
-                  src="/images/my-avatar.gif"
-                  alt="Profile Avatar"
-                  className="w-48 h-48 rounded-full object-cover"
-                />
+                {!isMobile || gifLoaded ? (
+                  <img
+                    src="/images/my-avatar.gif"
+                    alt="Profile Avatar"
+                    className="w-48 h-48 rounded-full object-cover"
+                    onLoad={() => setGifLoaded(true)}
+                    onError={() => setGifLoaded(true)}
+                  />
+                ) : (
+                  <img
+                    src="/images/my-avatar.gif"
+                    alt="Profile Avatar - Click to animate"
+                    className="w-48 h-48 rounded-full object-cover cursor-pointer opacity-80 hover:opacity-100 transition-opacity"
+                    onClick={() => setGifLoaded(true)}
+                    style={{
+                      filter: 'grayscale(0.3)',
+                      transition: 'all 0.3s ease'
+                    }}
+                  />
+                )}
+                {/* Fallback for very slow connections */}
+                <div
+                  className="absolute inset-0 bg-gradient-to-br from-blue-200 to-cyan-200 dark:from-blue-800 dark:to-cyan-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300"
+                  style={{ display: gifLoaded ? 'none' : 'flex' }}
+                >
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-2 mx-auto">
+                      DI
+                    </div>
+                    <p className="text-sm font-medium">Loading...</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
