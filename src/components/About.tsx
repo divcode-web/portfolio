@@ -103,11 +103,10 @@ export function About() {
               </div>
             </div>
 
-            {/* Avatar */}
             <div className="relative flex justify-center">
               <div className="w-64 h-64 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 flex items-center justify-center overflow-hidden">
                 <img
-                  src="/my-avatar.gif"
+                  src="/images/my-avatar.gif"
                   alt="Profile Avatar"
                   className="w-48 h-48 rounded-full object-cover"
                 />
